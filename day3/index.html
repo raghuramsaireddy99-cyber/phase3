@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloudSync SaaS Platform</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Segoe UI,sans-serif;
+background:#f8f9fa;
+}
+
+.navbar{
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.carousel-item{
+height:90vh;
+min-height:600px;
+}
+
+.slide1{
+background:linear-gradient(135deg,#0d6efd,#6610f2);
+}
+
+.slide2{
+background:linear-gradient(135deg,#198754,#20c997);
+}
+
+.slide3{
+background:linear-gradient(135deg,#fd7e14,#dc3545);
+}
+
+.carousel-content{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.carousel-content h1{
+font-size:4rem;
+font-weight:700;
+}
+
+.section-title{
+font-size:40px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.feature-card{
+border:none;
+transition:.4s;
+cursor:pointer;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.price-card{
+border:none;
+transition:.4s;
+}
+
+.price-card:hover{
+transform:scale(1.05);
+}
+
+.popular{
+border:3px solid #0d6efd;
+}
+
+.counter-box{
+padding:30px;
+background:white;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.testimonial{
+max-width:800px;
+margin:auto;
+}
+
+.footer{
+background:#212529;
+color:white;
+}
+
+.backtop{
+position:fixed;
+bottom:20px;
+right:20px;
+display:none;
+z-index:1000;
+}
+
+@media(max-width:768px){
+
+.carousel-content h1{
+font-size:2.2rem;
+}
+
+.carousel-item{
+height:75vh;
+}
+
+.section-title{
+font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">
+website
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#features">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#pricing">Pricing</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#testimonials">Reviews</a>
+</li>
+
+<li class="nav-item">
+<button class="btn btn-primary ms-lg-3"
+data-bs-toggle="modal"
+data-bs-target="#contactModal">
+Contact
+</button>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO CAROUSEL -->
+
+<section id="home">
+
+<div id="heroCarousel"
+class="carousel slide carousel-fade"
+data-bs-ride="carousel">
+
+<div class="carousel-indicators">
+
+<button data-bs-target="#heroCarousel"
+data-bs-slide-to="0"
+class="active"></button>
+
+<button data-bs-target="#heroCarousel"
+data-bs-slide-to="1"></button>
+
+<button data-bs-target="#heroCarousel"
+data-bs-slide-to="2"></button>
+
+</div>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active slide1">
+
+<div class="carousel-content">
+
+<div>
+
+<h1>Grow Your Business Faster</h1>
+
+<p class="lead">
+Modern SaaS solutions for startups and enterprises.
+</p>
+
+<a href="#pricing"
+class="btn btn-light btn-lg">
+Get Started
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="carousel-item slide2">
+
+<div class="carousel-content">
+
+<div>
+
+<h1>Cloud Based Platform</h1>
+
+<p class="lead">
+Access your business from anywhere.
+</p>
+
+<a href="#features"
+class="btn btn-light btn-lg">
+Explore Features
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="carousel-item slide3">
+
+<div class="carousel-content">
+
+<div>
+
+<h1>Powerful Analytics</h1>
+
+<p class="lead">
+Make smarter decisions with real-time insights.
+</p>
+
+<a href="#testimonials"
+class="btn btn-light btn-lg">
+View Reviews
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="carousel-control-prev"
+data-bs-target="#heroCarousel"
+data-bs-slide="prev">
+
+<span class="carousel-control-prev-icon"></span>
+
+</button>
+
+<button class="carousel-control-next"
+data-bs-target="#heroCarousel"
+data-bs-slide="next">
+
+<span class="carousel-control-next-icon"></span>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+Features
+</h2>
+
+<p>
+Everything you need to manage your business.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-3">
+
+<div class="card feature-card shadow h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-cloud-check fs-1 text-primary"></i>
+
+<h4 class="mt-3">
+Cloud Sync
+</h4>
+
+<p>
+Real-time cloud synchronization.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 col-lg-3">
+
+<div class="card feature-card shadow h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-shield-lock fs-1 text-success"></i>
+
+<h4 class="mt-3">
+Security
+</h4>
+
+<p>
+Enterprise grade protection.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 col-lg-3">
+
+<div class="card feature-card shadow h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-graph-up fs-1 text-danger"></i>
+
+<h4 class="mt-3">
+Analytics
+</h4>
+
+<p>
+Track growth with smart reports.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 col-lg-3">
+
+<div class="card feature-card shadow h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-people fs-1 text-warning"></i>
+
+<h4 class="mt-3">
+Collaboration
+</h4>
+
+<p>
+Work together efficiently.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="py-5 bg-primary text-white">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3 mb-4">
+<h1 class="counter" data-target="10000">0</h1>
+<p>Customers</p>
+</div>
+
+<div class="col-md-3 mb-4">
+<h1 class="counter" data-target="500">0</h1>
+<p>Companies</p>
+</div>
+
+<div class="col-md-3 mb-4">
+<h1 class="counter" data-target="50">0</h1>
+<p>Countries</p>
+</div>
+
+<div class="col-md-3 mb-4">
+<h1 class="counter" data-target="99">0</h1>
+<p>Uptime %</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+Pricing Plans
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="card price-card shadow text-center">
+
+<div class="card-body">
+
+<h3>Starter</h3>
+
+<h1>₹499</h1>
+
+<p>/month</p>
+
+<hr>
+
+<p>5 Projects</p>
+<p>10GB Storage</p>
+<p>Email Support</p>
+
+<button class="btn btn-outline-primary">
+Choose Plan
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card price-card popular shadow text-center">
+
+<div class="card-body">
+
+<span class="badge bg-primary">
+Most Popular
+</span>
+
+<h3 class="mt-3">Professional</h3>
+
+<h1>₹999</h1>
+
+<p>/month</p>
+
+<hr>
+
+<p>Unlimited Projects</p>
+<p>100GB Storage</p>
+<p>Priority Support</p>
+
+<button class="btn btn-primary">
+Choose Plan
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card price-card shadow text-center">
+
+<div class="card-body">
+
+<h3>Enterprise</h3>
+
+<h1>₹1999</h1>
+
+<p>/month</p>
+
+<hr>
+
+<p>Unlimited Everything</p>
+<p>Dedicated Server</p>
+<p>24/7 Support</p>
+
+<button class="btn btn-outline-primary">
+Choose Plan
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+Customer Reviews
+</h2>
+
+</div>
+
+<div id="reviewCarousel"
+class="carousel slide"
+data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+
+<div class="testimonial text-center">
+
+<h4>
+★★★★★
+</h4>
+
+<p class="lead">
+Amazing SaaS platform. Increased our productivity by 200%.
+</p>
+
+<h5>
+Rahul Sharma
+</h5>
+
+</div>
+
+</div>
+
+<div class="carousel-item">
+
+<div class="testimonial text-center">
+
+<h4>
+★★★★★
+</h4>
+
+<p class="lead">
+Simple, secure and easy to use.
+</p>
+
+<h5>
+Priya Reddy
+</h5>
+
+</div>
+
+</div>
+
+<div class="carousel-item">
+
+<div class="testimonial text-center">
+
+<h4>
+★★★★★
+</h4>
+
+<p class="lead">
+Best investment for our company.
+</p>
+
+<h5>
+Arjun Kumar
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer py-5">
+
+<div class="container text-center">
+
+<h3>
+website
+</h3>
+
+<p>
+Modern Software Solutions For Modern Businesses
+</p>
+
+<p>
+ 2026 All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+<!-- CONTACT MODAL -->
+
+<div class="modal fade"
+id="contactModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+Contact Us
+</h5>
+
+<button class="btn-close"
+data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<form id="contactForm">
+
+<div class="mb-3">
+
+<input type="text"
+class="form-control"
+placeholder="Name"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<input type="email"
+class="form-control"
+placeholder="Email"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<textarea
+class="form-control"
+rows="4"
+placeholder="Message"
+required></textarea>
+
+</div>
+
+<button class="btn btn-primary w-100">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<button
+id="backTop"
+class="btn btn-primary backtop">
+↑
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+document.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Message Sent Successfully!");
+
+let modal =
+bootstrap.Modal.getInstance(
+document.getElementById("contactModal")
+);
+
+modal.hide();
+
+this.reset();
+
+});
+
+const counters =
+document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+let update=()=>{
+
+let target=+counter.dataset.target;
+
+let count=+counter.innerText;
+
+let increment=target/100;
+
+if(count<target){
+
+counter.innerText=
+Math.ceil(count+increment);
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+});
+
+const backTop =
+document.getElementById("backTop");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+backTop.style.display="block";
+
+}else{
+
+backTop.style.display="none";
+
+}
+
+});
+
+backTop.addEventListener("click",()=>{
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+</script>
+
+</body>
+</html>
